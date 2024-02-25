@@ -56,3 +56,8 @@ const toggleDropDown = () => {
   dropDownMenu.style.top = rect.bottom = "px";
   dropDownMenu.style.left = rect.left = "px";
 };
+
+document.getElementById("redirectSeminar").addEventListener("click", (e) => {
+  e.preventDefault();
+  changeActivePage("tjanster/seminarier/seminarie-forsta-steget");
+});

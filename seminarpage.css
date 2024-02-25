@@ -1,0 +1,140 @@
+.seminar__section {
+  background-color: var(--primary-blue);
+  padding-top: 30vh;
+  margin-top: -20vh;
+
+  @media (max-width: 700px) {
+    padding-top: 25vh;
+  }
+}
+
+.seminar__wrapper {
+  padding-left: 15vw;
+  padding-right: 15vw;
+  padding-bottom: 15vw;
+  @media (max-width: 700px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.seminar__section--header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  color: var(--lightgreen);
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    padding-bottom: 1rem;
+  }
+}
+
+.seminar__btn--header {
+  vertical-align: bottom;
+  align-self: center;
+  @media (max-width: 700px) {
+    display: none;
+  }
+}
+
+.seminar__about {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 2rem;
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.seminar__abouttxt {
+  background-color: var(--lightgreen);
+  padding: 4rem;
+  @media (max-width: 700px) {
+    padding: 2rem;
+  }
+}
+
+.seminar__hr {
+  width: 100%;
+  color: var(--lightgreen);
+  margin-bottom: -0.1rem;
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+.seminar__abouttxt p {
+  font-family: "Open Sans";
+  padding-right: 5rem;
+  @media (max-width: 700px) {
+    font-size: 1rem;
+    line-height: 150%;
+    padding: 0;
+  }
+}
+.seminar__abouttxt ol {
+  @media (max-width: 700px) {
+    font-size: 1rem;
+    line-height: 150%;
+    padding: 0;
+  }
+}
+
+.seminar__aboutpersons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--lightgreen);
+  padding-left: 2rem;
+  @media (max-width: 700px) {
+    padding: 0;
+    display: flex;
+  }
+}
+.seminar__aboutpersons img {
+  max-width: 200px;
+  width: 100%;
+  @media (max-width: 700px) {
+    width: 100%;
+    max-width: 100vw;
+  }
+}
+.seminar__aboutpersons article {
+  @media (max-width: 700px) {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.seminar__txtperson {
+  font-size: 0.8rem;
+  word-wrap: break-word;
+  line-break: auto;
+  @media (max-width: 700px) {
+    font-size: 1rem;
+    line-height: 150%;
+    padding-bottom: 1rem;
+  }
+}
+.seminar__btn--mobile {
+  @media (min-width: 701px) {
+    display: none;
+  }
+}
+.mobile--gap {
+  @media (max-width: 700px) {
+    row-gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

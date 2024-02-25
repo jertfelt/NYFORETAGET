@@ -8,7 +8,7 @@
   }
 }
 
-.hero--bg {
+.hero__bg {
   margin-top: -12rem;
   background-image: url(/public/linjer.svg);
   background-size: 150%;
@@ -69,7 +69,7 @@
   }
 }
 
-h1 {
+.form__h1 {
   color: var(--primary-blue);
   text-align: center;
 }
@@ -92,7 +92,7 @@ h1 {
   }
 }
 
-.form--span-details {
+.form__span-details {
   padding-left: var(--padding-xl);
   @media (max-width: 600px) {
     padding: 0;
