@@ -30,6 +30,7 @@
     <div id="root">
       <header class="header--startpage">
         <!--Om man klickar på ikon eller logotyp ska man komma till start-->
+
         <a href="/" class="nav--icon-link" aria-label="Gå till startsida">
           <span class="nav--icon flex flex--row">
             <img
@@ -74,6 +75,7 @@
         </button>
 
         <!--meny desktop-->
+
         <nav class="nav--desktop">
           <ul class="nav--ul">
             <li>
@@ -100,6 +102,7 @@
             </li>
 
             <!--visas när man klickar på Tjänster-->
+
             <div class="dropdown-menu" id="dropdownMenuServices">
               <nav class="dropdown--services">
                 <ul>
@@ -132,6 +135,7 @@
       </header>
 
       <!--dropdownmeny ipad-->
+
       <nav class="nav--ipad nav--slide-in-ipad" id="showIpadMenu">
         <div class="ipad--grid">
           <ul class="nav--ul nav--ul-phone">
@@ -181,6 +185,7 @@
       </nav>
 
       <!--dropdownmeny smartphone-->
+
       <nav class="nav--phone nav--slide-in" id="showMenuPhone">
         <ul class="nav--ul nav--ul-phone">
           <li class="nav--phone-standard">
@@ -218,6 +223,7 @@
           <section id="startpageHero" class="hero">
             <div class="hero__bg">
               <!--Om formulär är togglad, visa som hero-->
+
               <article class="article--form article--hero">
                 <div class="form--toggled">
                   <h1 class="h1--main form__h1">
@@ -366,7 +372,9 @@
             </article> -->
             </div>
           </section>
+
           <!--om formulär är togglad, visa denna sektion. Annars dölj:-->
+
           <section id="startpageCallToAction">
             <div class="article--notform">
               <article class="commercial">
@@ -383,7 +391,9 @@
               </article>
             </div>
           </section>
+
           <!--Visa alltid:-->
+
           <section id="startpageAboutServices" class="startpage--services">
             <div class="startpage--services--bg">
               <article class="startpage--services--container">
@@ -467,6 +477,7 @@
             </div>
           </section>
         </section>
+        <!--sektioner:-->
         <section id="omoss" class="section hidden">
           <section></section>
         </section>
@@ -625,13 +636,13 @@
         </div>
       </footer>
     </div>
+    <!--navigation-->
     <script src="queryString.js"></script>
     <!-- burger menu and dropdown menu-->
-    <script src="navigations.js"></script>
+    <script src="utilities.js"></script>
     <!--Confirmation Modal function-->
     <script src="modal.js"></script>
     <!--form:-->
     <script src="registerForm.js"></script>
-    <!--navigation-->
   </body>
 </html>
