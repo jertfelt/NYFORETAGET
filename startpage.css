@@ -2,104 +2,163 @@ body {
   background-color: var(--secondary-blue);
 }
 
-.article--notform{
+.article--notform {
   background-color: var(--primary-blue);
 }
-.article--notform{
-  display:flex;
+.article--notform {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding:3rem;
+  padding: 3rem;
   color: var(--white);
-  padding-bottom:4rem;
+  padding-bottom: 4rem;
 
-  @media (max-width:600px){
-    margin:0 auto;
-    padding:0;
-    width:100%;
-    padding-top:2rem;
-    padding-bottom:2rem;
-  };
-  @media (min-width:1000px){
-    align-items: flex-start;
-    justify-content:space-between;
+  @media (max-width: 600px) {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
-  
 }
-.commercial h1{
+.commercial h1 {
   color: var(--lightgreen);
   margin-bottom: 0;
-  @media (min-width:1000px){
-    max-width:90%;
-    text-align:left;
+  @media (min-width: 900px) {
+    max-width: 90%;
+    text-align: left;
   }
 }
 
-.commercial p{
-  @media (min-width:1000px){
-    max-width:90%;
-  };
-  padding-bottom:2rem;
-
-  @media (max-width:600px){
-    max-width:90vw;
-    margin:1rem;
-    padding:1rem;
-    text-align:center;
-    margin-right:2rem;
+.commercial {
+  @media (max-width: 899px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (min-width: 900px) {
+    padding-left: 3rem;
+    padding-right: 5rem;
   }
 }
 
-.commercial button{
+.commercial p {
+  padding-bottom: 1rem;
+
+  @media (max-width: 600px) {
+    max-width: 90vw;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+.commercial button {
   padding: 1rem 8px;
-  width:300px;
-  @media (max-width:600px){
+  width: 300px;
+  @media (max-width: 600px) {
     padding: 8px;
-    width:70vw;
+    width: 70vw;
   }
 }
 
-.startpage--services--bg{
+.startpage--services--bg {
   background-color: var(--accent-blue);
   background-image: url(/public/berg.svg);
   background-size: cover;
   background-position: no-repeat;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.startpage--services--container{
-  display:flex;
+.startpage--services--container {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding:0;
-  width:100%;
-  max-width:100vw;
-  padding-top:2rem;
-  padding-bottom:2rem;
+  padding: 0;
+  width: 100%;
+  max-width: 100vw;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  @media (min-width: 501px) {
+    padding-bottom: 5rem;
+  }
 }
-.startpage--services--about{
-  max-width:100%;
-  padding:0;
+.startpage--services--container .grid--from-tablet {
+  @media (min-width: 700px) and (max-width: 899px) {
+    display: grid;
+    max-width: 100vw;
+    width: 100%;
+    padding: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+  @media (min-width: 900px) {
+    display: grid;
+    max-width: 80vw;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
 }
-.startpage--services--about img{
-  max-width:100%;
-}
-.startpage--services--about h5{
-  margin:0;
-padding-top:1rem;}
 
-.startpage--services--about p{
-  max-width:100vw;
+.startpage--services--about {
+  max-width: 100%;
+  padding: 0;
+  @media (min-width: 501px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (min-width: 700px) {
+    display: block;
+    padding: 1rem;
+  }
+}
+.startpage--services--about img {
+  @media (min-width: 501px) {
+    width: 90vw;
+    max-width: 400px;
+  }
+  @media (min-width: 700px) {
+    width: 100%;
+    align-self: flex-end;
+    padding: 0;
+  }
+}
+
+.startpage--services--about h5 {
+  margin: 0;
+  padding-top: 1rem;
+  @media (min-width: 501px) {
+    padding-top: 2rem;
+  }
+  @media (min-width: 700px) {
+    padding-top: 0;
+  }
+}
+
+.startpage--services--about p {
+  max-width: 90vw;
+
   /* margin-top:-2rem; */
+  @media (min-width: 501px) {
+    max-width: 400px;
+  }
+  @media (min-width: 700px) {
+    max-width: 100%;
+  }
 }
 
-.startpage--services--abouttxt{
-  padding-left:1rem;
-  max-width:90vw;
-  padding-bottom:2rem;
+.startpage--services--abouttxt {
+  padding-left: 1rem;
+  max-width: 90vw;
+  padding-bottom: 2rem;
 }

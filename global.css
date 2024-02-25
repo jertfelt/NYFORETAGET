@@ -18,9 +18,9 @@
   --line-height-l: 150%;
   --line-height-xl: 200%;
   /*font-sizes*/
-  --font-size-h1: clamp(3rem, 4.6rem, 4.8rem);
-  --font-size-h2: clamp(2.8rem, 3rem, 3.2rem);
-  --font-size-h3: clamp(1.8rem, 2rem, 2.3rem);
+  --font-size-h1: clamp(3rem, 5vw, 4.8rem);
+  --font-size-h2: clamp(2.8rem, 5vw, , 3.2rem);
+  --font-size-h3: clamp(1.8rem, 5vw, , 2.3rem);
   --font-size-h4: clamp(1.5rem, 1.5rem, 2rem);
   --font-size-h5: clamp(1rem, 7vw, 1.5rem);
   --font-size-p: clamp(14px, 14px, 1rem);
@@ -40,11 +40,11 @@
 body {
   font-size: var(--base-font-size);
   margin: 0 auto;
-  min-height:100vh;
+  min-height: 100vh;
 }
-main{
+main {
   flex: 1;
-  min-height:80vh;
+  min-height: 80vh;
 }
 
 /*fonts*/
@@ -149,9 +149,24 @@ main{
 .detail {
   font-size: var(--detail-font-size);
 }
-.paragraph--link{
-  color:var(--primary-blue);
-  font-weight:bold;
+.paragraph--link {
+  color: var(--primary-blue);
+  font-weight: bold;
+  @media (max-width: 500px) {
+    line-height: 200%;
+  }
+}
+.paragraph--link:hover {
+  font-style: italic;
+  @media (max-width: 400px) {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 9px;
+  }
+}
+.mobile--linebreak {
+  @media (min-width: 500px) {
+    display: none;
+  }
 }
 /*buttons*/
 
@@ -164,7 +179,6 @@ a:active,
 a:visited {
   color: inherit;
 }
-
 
 .btn--primary,
 .btn--secondary,
@@ -193,7 +207,7 @@ a:visited {
   color: var(--white);
   border-color: var(--primary-blue);
 }
-.btn--terniary{
+.btn--terniary {
   background: transparent;
 }
 
@@ -202,11 +216,9 @@ a:visited {
   color: var(--primary-blue);
 }
 .btn--terniary-darkbg {
-  
   border-color: var(--white);
   color: var(--white);
 }
-
 
 .btn--primary,
 .btn--secondary,
@@ -274,19 +286,25 @@ a:visited {
 
 .grid {
   display: grid;
-  @media (max-width:768px){
-    display:flex;
+  @media (max-width: 600px) {
+    display: flex;
   }
 }
 
 .grid--twocolumn {
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  @media (max-width:500px){
-    flex-direction:column;
-    align-items:flex-start;
-    justify-content:center;
-    gap:2px;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  @media (min-width: 601px) and (max-width: 900px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  @media (min-width: 901px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
   }
 }
 
@@ -295,23 +313,41 @@ a:visited {
   padding-right: 2rem;
 }
 
-
-
+.errorpage {
+  background-color: var(--primary-blue);
+  color: var(--white);
+}
 
 /*breakpoints*/
-
+/* Mobile Phones */
 @media (max-width: 500px) {
-  .nav--tablet {
+  .nav--tablet,
+  .nav--ipad,
+  .nav--desktop,
+  .nav--icon--desktop {
     display: none;
+  }
+  img {
+    max-width: 100%;
+  }
+  :root {
+    --base-font-size: 14px;
+    --font-size-h1: clamp(2rem, 12vw, 4rem);
+    --font-size-h2: clamp(1.5rem, 12vw, 3rem);
+    --font-size-h3: clamp(1.2rem, 10vw, 2.5rem);
+    --font-size-h4: clamp(1rem, 2vw, 2rem);
+    --font-size-h5: clamp(1.8rem, 2vw, 2.5rem);
+    --font-size-p: clamp(14px, 14px, 1rem);
   }
 }
 
-@media (min-width: 501px) {
-  .nav--phone {
+/* Tablets */
+@media (min-width: 501px) and (max-width: 768px) {
+  .nav--phone,
+  .nav--desktop,
+  .nav--icon--desktop {
     display: none;
   }
-}
-@media (max-width: 768px) {
   :root {
     --base-font-size: 14px;
     --font-size-h1: clamp(2rem, 8vw, 4rem);
@@ -323,22 +359,17 @@ a:visited {
   }
 }
 
-@media (max-width: 949px) {
-  .nav--desktop {
-    display: none;
-  }
-  .nav--icon--desktop {
-    display: none;
-  }
-}
-@media (min-width: 950px) {
-  .nav--tablet, .nav--ipad {
+/* Medium and Large Desktops */
+@media (min-width: 769px) and (max-width: 949px), (min-width: 950px) {
+  .nav--tablet,
+  .nav--ipad,
+  .nav--phone {
     display: none;
   }
   .nav--icon--phone--tablet {
     display: none;
   }
-  :root{
+  :root {
     --base-font-size: 16px;
     --font-size-h1: clamp(2rem, 15vw, 4rem);
     --font-size-h2: clamp(1.5rem, 6vw, 3rem);
@@ -349,14 +380,15 @@ a:visited {
   }
 }
 
+/* Extra Large Desktops */
 @media (min-width: 1200px) {
   :root {
     --base-font-size: 18px;
-    --font-size-h1: clamp(3.6rem, 20vw, 5rem);
-    --font-size-h2: clamp(1.5rem, 18vw, 4rem);
-    --font-size-h3: clamp(1.2rem, 12vw, 3rem);
-    --font-size-h4: clamp(1.2rem, 12vw, 2rem);
-    --font-size-h5: clamp(1rem, 12vw, 2rem);
+    --font-size-h1: clamp(3.6rem, 5vw, 5rem);
+    --font-size-h2: clamp(1.5rem, 5vw, 4rem);
+    --font-size-h3: clamp(1.2rem, 5vw, 3rem);
+    --font-size-h4: clamp(1.2rem, 5vw, 2rem);
+    --font-size-h5: clamp(1rem, 5vw, 2rem);
     --font-size-p: clamp(14px, 14px, 1rem);
   }
 }

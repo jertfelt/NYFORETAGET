@@ -6,9 +6,15 @@ footer {
   padding-left: var(--padding-xl);
   padding-right: var(--padding-xl);
   padding-bottom: var(--padding-l);
-  @media(max-width: 500px){
-    padding-left:0;
-    padding-top:var(--padding-m);
+  @media (max-width: 600px) {
+    padding-left: var(--padding-xl);
+  }
+  @media (min-width: 601px) and (max-width: 899px) {
+    padding: 0;
+    padding: var(--padding-l);
+  }
+  @media (min-width: 900px) {
+    padding: var(--padding-xl);
   }
 }
 
@@ -19,4 +25,16 @@ footer a {
 
 .footer-list {
   list-style: none;
+
+  @media (min-width: 601px) {
+    padding: 0;
+  }
+}
+
+.grid--footer {
+  @media (min-width: 901px) {
+    max-width: 50s%;
+    align-self: center;
+    padding-left: 20vw;
+  }
 }
