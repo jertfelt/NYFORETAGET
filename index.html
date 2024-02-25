@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nyföretag AB</title>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="icon" href="/public/favicon.ico" />
+    <link rel="description" content="En hemsida för dig som nystartad företagare eller för dig som går i funderingarna att starta eget!" />
+    <meta name="description" content="En hemsida för dig som nystartad företagare eller för dig som går i funderingarna att starta eget!" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="nav.css"/>
+    <link rel="stylesheet" href="startpage.css" />
+    <link rel="stylesheet" href="hero.css"/>
+    <link rel="stylesheet" href="form.css"/>
+    <link rel="stylesheet" href="footer.css" />
+  </head>
+  </head>
+  <body class="startpage">
+    <header class="header--startpage">
+
+      <!--Om man klickar på ikon eller logotyp ska man komma till start-->
+      <a href="/" class="nav--icon-link" 
+      aria-label="Gå till startsida">
+        <span class="nav--icon flex flex--row">
+          <img src="/public/logo_free.png" alt="Nyföretaget AB Logotyp" 
+          class="logo nav--icon--phone--tablet" />
+          <img src="/public/logo_whitetxt.png" alt="Nyföretaget AB" class="nav--icon--desktop" />
+        </span>
+      </a>
+
+      <!--meny telefon-->
+    
+        <button 
+        class="btn--burger btn--phone nav--phone" onClick="openPhoneMenu()" 
+        aria-label="Öppna Meny">
+          <div class="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        
+    
+      <!--meny ipad-->
+      
+      <button class="btn--burger btn--ipad nav--ipad" onClick="openIpadMenu()" aria-label="Öppna Meny">
+        <div class="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+      
+      <!--meny desktop-->
+      <nav class="nav--desktop">
+        <ul class="nav--ul">
+          <li>
+            <a href="#omoss">
+              Om Oss</a>
+          </li>
+          <li>
+            <button class="btn--fakelink btn--header" id="toggleServices" onClick="toggleDropDown()" aria-label="Visa tjänstermeny"> 
+              Tjänster <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="chevron-icon">
+                <path d="M9.293 14.707a1 1 0 0 1-1.414 0L4.293 10.707a1 1 0 0 1 1.414-1.414L10 12.586l4.293-4.293a1 1 0 0 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0z" />
+              </svg>
+            </button>  
+          </li>
+
+          <!--visas när man klickar på Tjänster-->
+          <div class="dropdown-menu" id="dropdownMenuServices">
+            <nav class="dropdown--services">
+              <ul>
+                <li>
+                  <a href="#tjanster/seminarier">
+                    Seminarier
+                  </a>
+                  
+                </li>
+                <li>
+                  <a href="#tjanster/frageladan">
+                    Frågelådan
+                  </a>
+                
+                </li>
+                <li>
+                  <a href="#tjanster/traffar">
+                    Träffar
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <li>
+            <a href="#kontakt"> 
+              Kontakt</a>
+          </li>
+          <li>
+            <button aria-label="Change language to english" class="btn--fakelink" onClick="changeLanguage()"> 
+              In English </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--dropdownmeny ipad-->
+    <nav class="nav--ipad nav--slide-in-ipad" id="showIpadMenu">
+      <div class="ipad--grid">
+      <ul class="nav--ul nav--ul-phone">
+        <li>
+          <a href="#om-oss">Om Oss</a>
+        </li>
+        <li>
+          <a href="#tjanster">Tjänster  
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M9.29 6.71a.996.996 0 0 0 0 1.41L13.17 12l-3.88 3.88a.996.996 0 1 0 1.41 1.41l4.59-4.59a.996.996 0 0 0 0-1.41L10.7 6.7a.996.996 0 0 0-1.41 0z"/>
+          </svg></a>
+        </li>
+        <li>
+          <a href="#kontakt"> 
+            Kontakt</a>
+        </li>
+        <li>
+          <button aria-label="Change language to english" class="btn--fakelink" onClick="changeLanguage()"> In English </button>
+        </li>
+      </ul>
+      <ul class="nav--services-ipad">
+        <li>
+          <a href="#tjanster/seminarier">
+            Seminarier
+          </a>
+  
+        </li>
+        <li>
+          <a href="#tjanster/frageladan">
+            Frågelådan
+          </a>
+        
+        </li>
+        <li>
+          <a href="#tjanster/traffar">
+            Träffar
+          </a>
+        </li>
+      </ul>
+    </div>
+    </nav>
+
+    <!--dropdownmeny smartphone-->
+    <nav class="nav--phone nav--slide-in" id="showMenuPhone">
+      <ul class="nav--ul nav--ul-phone">
+        <li>
+          <a href="#om-oss">Om Oss</a>
+        </li>
+        <li>
+          <a href="#tjanster">Tjänster
+          </a> 
+        </li>
+        <li class="nav--services">
+          <a href="#tjanster/seminarier">
+            Seminarier
+          </a>
+          
+        </li>
+        <li class="nav--services">
+          <a href="#tjanster/frageladan">
+            Frågelådan
+          </a>
+        
+        </li>
+        <li class="nav--services">
+          <a href="#tjanster/traffar">
+            Träffar
+          </a>
+        </li>
+        <li>
+          <a href="#kontakt"> 
+            Kontakt</a>
+        </li>
+        <li>
+          <button aria-label="Change language to english" class="btn--fakelink" onClick="changeLanguage()"> In English </button>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="startpageHero" class="hero">
+        <div class="hero--bg">
+              <!--Om formulär är togglad, visa som hero-->
+          <article class="article--form article--hero">
+            <div class="form--toggled">
+              <h1 class="h1--main">
+                Anmäl ditt intresse till seminariet Första Stegen</h1>
+              <form id="registerInterest" 
+              action="/submit-form" 
+              method="post" 
+              class="form--register">
+              <label for="contactPerson">
+                Kontaktperson:
+              </label>
+              <input type="text" 
+              id="contactPerson" name="contactPerson" placeholder="Ditt namn" required>
+                <!-- Om tom visa nedan:
+              <span class="error--txt">{errorContactPerson}</span>
+              -->
+              <fieldset>
+                <legend>
+                  Välj kontaktmetod:</legend>
+                <!-- Om ej vald, visa nedan:
+              <span class="error--txt">{errorContactMethod}</span>
+              -->
+              <span class="radiospan">
+                <input type="radio" 
+                id="phoneContact" 
+                name="contactMethod" value="phoneContact" 
+                required>
+                <label for="phoneContact">Telefon</label>
+              </span>
+              <span class="radiospan">
+                <input type="radio" id="emailContact" name="contactMethod" value="emailContact" required>
+                <label for="emailContact">Email</label>
+              </span>
+              </fieldset>
+              
+              <label for="contactDetail">Telefon/Email:</label>
+              <input type="text" id="contactDetail" name="contactDetail" placeholder="Telefonnummer/Email" required/>
+              <!-- Om fel på kontaktuppgifter visa nedan: 
+              <span class="error--txt">{errorContactDetail}</span>
+              -->
+              <span class="formcontainer--labelandinfo">
+                <label for="organisationInput">Organisationsnummer:</label>
+                <p class="info">(valfritt)</p>
+              </span>
+              <label class="notmobile" for="organisationInput">Organisationsnummer:</label>
+              <span class="row--notmobile">
+              <input type="text" id="organisationInput" name="orgNr" placeholder="10 siffror"/>
+              <p class="detail info--optional">(valfritt)</p>
+              </span>
+              <!-- Om fel på organisationsnummer visa nedan: 
+              <span class="error--txt">{errorOrgNr}</span>
+              -->
+              <span class="formcontainer--labelandinfo">
+                <label for="companyName">Företagsnamn:</label>
+                <p class="info">(valfritt)</p>
+              </span>
+              <label for="companyName" class="notmobile">Företagsnamn:</label>
+              <span class="row--notmobile">
+              <input type="text" id="companyName" name="companyName" placeholder="Företagsnamn AB"/>
+              <p class="detail info--optional">(valfritt)</p>
+              </span>
+               <!-- Om  fel på flera ställen, visa errormeddelande nedan: 
+               <span class="error--txt-several">{errormsgseveral}
+-->
+               </span>
+               <span class="container--btn">
+                <button class="btn--primary btn--form" type="submit">Skicka</button>
+                <button class="btn--secondary btn--form" type="button" onclick="window.location.href='/seminarie/forsta-steget'">Läs mer</button>
+              </span>
+              </form>
+             
+            <div class="form--span-details">
+              <p class="detail">Intresseanmälan är inte bindande.</p>
+              <p class="detail">Vi samlar in telefonnummer och e-postadresser från formulär för att effektivt kommunicera med våra kudner och följer strikt GDPR för att säkerställa deras integritet och dataskydd.</p>
+            </div>
+            
+            </div>
+            
+          
+          </article>
+          <!-- Om formuläret är avstängt, visa reklam som hero istället-->
+          <!-- <article class="article--notform article--hero">
+              
+              <div class="commercial">
+                <h1 class="h1--main">Vi gör det svåra enkelt.</h1>
+                <p class="h4--second">Vilse i företagsdjungeln? Har du tusen frågor men ingen aning om vart du kan vända dig? Kom till oss, vi är experter på företag. Vi erbjuder föreläsningar, seminarier och personlig handledning till företag som behöver råd och stöd.</p>
+                <button class="btn--terniary-darkbg btn--terniary">
+                  Se hur vi kan hjälpa dig
+                </button>
+              </div>
+          </article> -->
+        </div>
+
+      </section>
+      <!--om formulär är togglad, visa denna sektion. Annars dölj:-->
+      <section id="startpageCallToAction">
+        <div class="article--notform">   
+          <article class="commercial">
+            <h1 class="h1--main">Vi gör det svåra enkelt.</h1>
+            <p class="h4--second">Vilse i företagsdjungeln? Har du tusen frågor men ingen aning om vart du kan vända dig? Kom till oss, vi är experter på företag. Vi erbjuder föreläsningar, seminarier och personlig handledning till företag som behöver råd och stöd.</p>
+            <button class="btn--terniary-darkbg btn--terniary">
+              Se hur vi kan hjälpa dig
+            </button>
+          </article>
+      </div>
+
+      </section>
+      <!--Visa alltid:-->
+      <section id="startpageAboutServices" class="startpage--services">
+      <div class="startpage--services--bg">
+        <article class="startpage--services--container">
+          <h2 class="h2--main">Våra tjänster</h2>
+          <article class="startpage--services--about">
+            <a href="/tjanster/frageladan" aria-label="Klicka för att gå till www.nyforetag.se/tjanster/frageladan">
+            <img src="/public/Rectangle 88.png" alt="En grupp personer som sitter vid ett bord med en massa bilder, de verkar diskutera."/>
+            </a>
+            <div class="startpage--services--abouttxt">
+            <h5 class="h5--main">FRÅGELÅDAN</h5>
+            <p class="paragraph">Har du några funderingar? Här samlar vi våra frågor om företag, ekonomi och om vår verksamhet. <a href="/tjanster/frageladan" class="paragraph--link" aria-label="Klicka för att gå till nyforetag.se/tjanster/frageladan" >Läs mer</a></p>
+            </div>
+          </article>
+          <article class="startpage--services--about">
+            <a href="/tjanster/traffar" aria-label="Klicka för att gå till www.nyforetag.se/tjanster/traffar">
+            <img src="/public/Rectangle 89.png" alt="En grupp personer som sitter och lyssnar på ett föredrag, en person håller upp handen."/></a>
+            <div class="startpage--services--abouttxt">
+            <h5 class="h5--main">TRÄFFAR</h5>
+            <p class="paragraph">Var med och lär känna andra företagare nära dig! Vi anordnar möten i hela landet. <a href="/tjanster/traffar"  aria-label="Klicka för att gå till nyforetag.se/tjanster/traffar" class="paragraph--link">Läs mer</a></p>
+            </div>
+          </article>
+          <article class="startpage--services--about">
+            <a href="/tjanster/seminarier" aria-label="Klicka för att gå till www.nyforetag.se/tjanster/seminarier">
+            <img src="/public/Rectangle 90.png" alt="En person står framför en tavla, det projiceras något bakom och ovanpå henne."/></a>
+            <div class="startpage--services--abouttxt">
+            <h5 class="h5--main">SEMINARIER</h5>
+            <p class="paragraph">Delta på något av våra seminarier och lär dig mer om företagande! <a href="/tjanster/seminarier" aria-label="Klicka för att gå till nyforetag.se/tjanster/seminarier" class="paragraph--link">Läs mer</a></p>
+            </div>
+          </article>
+        </article>
+      </div>
+      </section>
+    </main>
+    <footer>
+      <div class="grid grid--twocolumn">
+
+  
+      <ul class="footer-list detail">
+        <li>Nyföretaget AB</li>
+        <li>Orgnummer 88990909</li>
+      </ul>
+      <ul class="footer-list detail">
+        <li>Telefon: 070 55 789 00</li>
+        <li>Adressgatan 123 Gävle</li>
+        <li>
+          <a href="mailto: mail@mail.com?subject=Kontakt">Mail@mail.com</a>
+        </li>
+      </ul>
+    </div>
+    </footer>
+    <script src="header.js"></script>
+    <!-- <script>
+      function openPhoneMenu() {
+        document.body.classList.toggle('menu-open');
+      }
+    </script> -->
+  </body>
+</html>

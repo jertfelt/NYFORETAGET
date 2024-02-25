@@ -1,0 +1,22 @@
+footer {
+  background-color: var(--primary-blue);
+  color: var(--lightgreen);
+  min-height: 10vh;
+  padding-top: var(--padding-l);
+  padding-left: var(--padding-xl);
+  padding-right: var(--padding-xl);
+  padding-bottom: var(--padding-l);
+  @media(max-width: 500px){
+    padding-left:0;
+    padding-top:var(--padding-m);
+  }
+}
+
+footer a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.footer-list {
+  list-style: none;
+}

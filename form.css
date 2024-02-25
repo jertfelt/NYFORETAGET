@@ -1,0 +1,160 @@
+fieldset{
+  border:none;
+  padding:0;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+legend{
+  padding-top:1rem;
+  @media (max-width:600px){
+    margin-bottom:-.5rem;
+  }
+}
+label{
+  padding-top:1rem;
+ 
+}
+input{
+  border-radius: 3px;
+  border: 1px solid var(--primary-blue);
+  padding: 4px 8px;
+  max-width: 20vw;
+  margin-top:.5rem;
+  @media (max-width:600px){
+    width:100%;
+  max-width:70vw;
+  padding:10px;
+  border:2px solid;
+ 
+  }
+}
+
+label,legend, .error--txt, .error--txt-several{
+  font-size:14px;
+  @media (min-width:1100px) {
+    font-size:16px;
+  }
+}
+
+
+@media (max-width: 1000px){
+  input[type="radio"]{
+    transform: scale(1.2);
+    margin-right:0.5rem;
+  }
+}
+
+@media (max-width: 600px){
+  input[type="radio"]{
+    transform: scale(1.5);
+    margin-right:0.5rem;
+  }
+}
+
+.radiospan{
+  @media(max-width:600px){
+    display:flex;
+    height:2rem;
+    padding:.5rem;
+    margin-top:.5rem;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+  }
+}
+.radiospan:hover{
+  @media(max-width:600px){
+    background-color:rgba(0, 0, 0, 0.05);
+  }
+}
+.radiospan label{
+  @media(max-width:600px){
+    padding-left:14px;
+  }
+}
+
+.form--span-details p {
+  max-width: 300px; 
+}
+.formcontainer--labelandinfo{
+  @media (max-width:600px){
+   
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  
+   margin:0;
+   padding:0;
+   height:22px;
+   margin-bottom:4px;
+   margin-top:1rem;
+  }
+  @media (min-width:601px){
+    display:none;
+  }
+ 
+}
+.formcontainer--labelandinfo p{
+padding-left:10px;
+@media (max-width:600px){
+  margin-top:30px;
+ 
+}
+}
+.notmobile, .info--optional{
+  @media(max-width:600px){
+    display:none
+  }
+  @media(min-width:601px){
+    display:block;
+  }
+}
+.row--notmobile{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+.info--optional{
+
+padding-left: 10px;
+
+}
+
+
+.container--btn{
+  display:flex;
+  flex-direction: column;
+  max-width:300px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top:1.5rem;
+  padding-bottom:1rem;
+}
+
+.btn--form{
+  margin-top:1.5rem;
+  width:100%;
+  max-width:120px;
+  padding:8px 4px;
+}
+
+/*om error så lägs error--input in i input det gäller:*/
+.error--input{
+  border: 1px var(--red);
+  color: var(--red);
+  font-weight:bold;
+}
+/*samma sak för error-txt på respektive label*/
+.error--txt{
+  color: var(--red);
+  font-weight:bold;
+}
+/*och för hela formuläret*/
+.error--txt-several{
+  color: var(--red);
+  font-weight:bold;
+  max-width: 300px;
+
+}

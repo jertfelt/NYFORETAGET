@@ -1,0 +1,174 @@
+
+.nav--desktop ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding:0;
+}
+.nav--desktop li {
+  padding: 1rem;
+  align-items: center;
+}
+
+.btn--header {
+  margin-top: 1px;
+}
+.btn--burger {
+  background-color: transparent;
+  border: none;
+}
+.btn-burger:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.nav--desktop .btn--header svg,
+.nav--tablet svg,
+.nav--phone svg {
+  vertical-align: middle;
+}
+.nav--desktop svg{
+  margin-bottom:1px;
+}
+
+.chevron-icon {
+  fill: currentColor;
+  width: 16px;
+  height: 16px;
+}
+.nav--tablet .chevron-burger-icon {
+  width: 2rem;
+  height: 2rem;
+}
+.nav--phone .chevron-burger-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.chevron-burger-icon {
+  fill: var(--white);
+}
+
+.nav--ul {
+  list-style: none;
+}
+.nav--slide-in{
+display:none;
+}
+
+.nav--slide-in.open{
+  visibility: visible;
+  z-index:10;
+  position:fixed;
+  top:8vh;
+  right:0;
+  bottom:0;
+  width:100vw;
+  height:80vh;
+  background-color: var(--white);
+  color:black;
+  transition:transform 0.3s ease-out;
+  transform: translateX(0);
+}
+
+.slide-in-nav{
+  transform: translateX(0);
+}
+.nav--ul-phone{
+  padding-top:3rem;
+  display:flex;
+  flex-direction: column;
+  font-family: var(--secondary-font);
+  
+  font-size:2rem;
+}
+.nav--ul-phone li {
+  line-height:200%;
+}
+.nav--ul-phone li a, .nav--ul-phone li button{
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav--ul-phone li a:hover, .nav--ul-phone li button:hover{
+  text-decoration: none;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.nav--services a{
+  padding-left:1rem;
+  color: var(--secondary-blue);
+}
+
+.close{
+  display:hidden;
+}
+
+.nav--slide-in-ipad {
+  display: none; 
+}
+
+.nav--slide-in-ipad.open {
+  visibility: visible;
+  z-index: 10;
+  position: fixed;
+  top: 8vh;
+  right: 0;
+  bottom: 0;
+  width: 80vw;
+  height: 45vh;
+  background-color: var(--white);
+  color: black;
+  transition: transform 0.3s ease-out;
+  transform: translateX(0);
+  
+}
+.ipad--grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px;
+  width:60%;
+}
+.nav--services-ipad{
+  list-style: none;
+  padding-top: 5rem;
+  font-family: var(--secondary-font);
+  font-size:2rem;
+  text-transform: uppercase;
+}
+.nav--services-ipad li a {
+  text-decoration: none;
+  color: var(--secondary-blue);
+}
+.nav--services-ipad li a:hover{
+  text-decoration: underline;
+}
+
+svg{
+  fill:var(--black);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top:4.5rem;
+  margin-left:5rem;
+  background-color: var(--white);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 0.5rem 0;
+  display: none;
+}
+.dropdown-menu li a {
+  color:var(--black);
+}
+
+.dropdown-menu.open {
+  display: block; 
+}
+
+.dropdown--services ul{
+  list-style: none;
+  font-weight: bold;
+  display:flex;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  line-height:100%;
+}
